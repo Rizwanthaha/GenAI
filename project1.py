@@ -1,7 +1,7 @@
 import streamlit as st
 from google import genai
 
-cortana = genai.Client(api_key = "AIzaSyCetBQ5D_MU5WpG_9ftQvDTmn-I8B7B74c")
+cortana = genai.Client(api_key = "AIzaSyABefOpHK5zWr58xKL05_L1FrkWVdI2EM0")
 st.title("Rizwan's GPT")
 
 image = st.file_uploader('Upload Image', type=["jpg", "jpeg","png"])
@@ -18,3 +18,4 @@ if st.button("Send"):
          response = cortana.models.generate_content(model = "gemini-2.5-flash",
                                                     contents=query)
          st.write("Bot :" + response.text)
+
